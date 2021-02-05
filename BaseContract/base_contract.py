@@ -20,15 +20,11 @@ def load_abi(name: str) -> dict:
     abi = obj['abi']
     return abi
 
-def load_address(name: str) -> dict:
+def load_address(name: str, netId: int or str) -> dict:
     a_dict = load_json(name)
-    addr = a_dict[]
-
-
-print(load_abi("Arbiter"))
-
-#def load_address(address: str) -> str:
-
+    addr = a_dict['networks']
+    network_address = addr[netId]['address']
+    return network_address
 
 
 
