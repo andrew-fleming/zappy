@@ -42,12 +42,12 @@ class Artifact(TypedDict, total=False):
     networks: dict = {"networkId": {"address": str}}
 
 
-class BaseContractType(TypedDict, total=False):
+class base_contract_type(TypedDict, total=False):
     """ Base Contract """
-    artifactsDir: str
-    artifactName: str
-    networkId: int
-    networkProvider: Any or None
+    artifacts_dir: str
+    artifact_name: str
+    network_id: int
+    network_provider: Any
     contract: Any
     coordinator: str
     address: str
